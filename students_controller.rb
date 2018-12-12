@@ -29,7 +29,6 @@ get "/students/:id" do
   erb(:show)
 end
 
-
 # edit
 
 get "/students/:id/edit" do
@@ -37,6 +36,7 @@ get "/students/:id/edit" do
   erb(:edit)
 end
 
+# update
 post "/students/:id" do
   @student = Student.new(params)
   @student.update
@@ -44,7 +44,11 @@ post "/students/:id" do
 end
 
 # show
+post "/students/:id/delete" do
+  student = Student.find(params[:id])
+  student.delete()
+  redirect to "/students"
+end
 
-# update
 
 # destroy
