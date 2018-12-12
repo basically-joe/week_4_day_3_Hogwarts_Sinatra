@@ -69,3 +69,9 @@ a:hover {
   width: 160px;
   margin: 0 1em 0 0;
 }
+
+.all-students-list {
+  width: 300px;
+  padding: 5px;
+  margin-left:320px;
+}

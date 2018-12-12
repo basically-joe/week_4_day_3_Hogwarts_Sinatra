@@ -1,8 +1,8 @@
 
 
 <% @students.each do |student|%>
+<div class="all-students-list">
 <a href="./students/<%= student.id%>"><h2><%= student.format_name%></h2></a>
 <p><%= student.house.name.capitalize %></p>
-<hr>
-
+</div>
 <% end %>
